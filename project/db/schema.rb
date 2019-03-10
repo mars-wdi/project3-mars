@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2019_03_10_083012) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table "places", force: :cascade do |t|
+    t.string "country"
+    t.string "city"
+    t.string "catogry"
+    t.string "name"
+    t.boolean "visit"
+    t.boolean "favorite"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
