@@ -5,8 +5,12 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
-  end
+      if current_user
+        @places=current_user.places
+      else
+        @places = Place.all
+      end
+      end
 
   # GET /places/1
   # GET /places/1.json
@@ -26,7 +30,7 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.new(place_params)
-
+    @place.user_id=current_user.id
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: 'Place was successfully created.' }
