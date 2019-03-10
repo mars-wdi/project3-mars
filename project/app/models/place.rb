@@ -3,6 +3,5 @@ class Place < ApplicationRecord
     validates :city, :presence => true
     validates :catogry, :presence => true
     validates :name, :presence => true
-    validates :visit, :presence => true
-    validates :favorite, :presence => true
+
 end
