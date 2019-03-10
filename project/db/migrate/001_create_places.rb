@@ -3,10 +3,10 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       create_table :places do |t|
         t.string :country
         t.string :city
-        t.integer :catogry
-        t.boolean :name
-        t.string :visit
-        t.string :favorite
+        t.string :catogry
+        t.string :name
+        t.boolean :visit
+        t.boolean :favorite
   
         t.timestamps
       end
