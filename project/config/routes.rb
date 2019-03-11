@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'places/destroy'
   get 'places/index'
   get 'places/new'
+  get '/places/index/favorite' => 'places#my_favorite' ,as: 'my_favorite_place'
   get '/places/:id/favorite' => 'places#favorite' ,as: 'favorite_place'
- 
   get '/places/:id/' => 'places#show' ,as: 'show_place'
   
   resources :places do

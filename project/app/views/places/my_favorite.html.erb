@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<table>
+  <tbody>
+  <% @places.each do |place| %>
+    <tr>
+      <td><%= place.country %></td>
+      <td><%= place.city %></td>
+      <td><%= place.catogry %></td>
+      <td><%= place.name %></td>
+      <td><%= place.visit %></td>
+      <td><%= place.favorite %></td>
+  
+      
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<%= link_to 'Back', places_path %>
