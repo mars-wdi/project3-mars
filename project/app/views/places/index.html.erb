@@ -11,6 +11,7 @@
       <th>Name</th>
       <th>Visit</th>
       <th>Favorite</th>
+      <th>Favorite</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,7 +25,8 @@
         <td><%= place.name %></td>
         <td><%= place.visit %></td>
         <td><%= place.favorite %></td>
-        <td><%= link_to 'Show', place %></td>
+      <td>  <%= link_to 'Favorite',favorite_place_path(place) %> </td>
+        <td><%= link_to 'Show', show_place_path(place) %></td>
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
         <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

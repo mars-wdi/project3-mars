@@ -27,6 +27,20 @@ class PlacesController < ApplicationController
   # GET /places/1/edit
   def edit
   end
+  
+  def favorite
+   @rec=Place.find(params[:id])
+    if @rec.favorite == true 
+      @rec.favorite=false
+      else
+        @rec.favorite=true
+    end
+  
+    @rec.save
+  #  @place.update(place_params)
+    redirect_to "/places/#{params[:p]}"
+  end
+
 
   # POST /places
   # POST /places.json
@@ -78,4 +92,6 @@ class PlacesController < ApplicationController
     def place_params
       params.require(:place).permit(:country, :city, :catogry, :name, :visit, :favorite)
     end
+
+   
 end
