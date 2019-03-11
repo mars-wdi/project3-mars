@@ -30,5 +30,13 @@
   <%= @place.favorite %>
 </p>
 
+ 
+<h2>Comments</h2>
+<%= render @place.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+ 
+ 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

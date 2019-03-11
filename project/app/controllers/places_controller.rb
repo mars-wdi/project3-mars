@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+ 
+  protect_from_forgery with: :exception
   before_action :authenticate_user!,except: [:index, :show]
   before_action :set_place, only: [:show, :edit, :update, :destroy]
 
