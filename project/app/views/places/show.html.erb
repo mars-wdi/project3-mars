@@ -1,5 +1,19 @@
-<p id="notice"><%= notice %></p>
+<header></header>
+<style class="pic">
+.parallax { 
+  background-image: url("https://farm8.staticflickr.com/7574/15986564167_830b84330f_b.jpg");
+  height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 
+<!-- Container element -->
+<div class="parallax"></div>
+
+<p id="notice"><%= notice %></p>
 <p>
   <strong>Country:</strong>
   <%= @place.country %>
@@ -28,7 +42,7 @@
 <p>
   <strong>Favorite:</strong>
 
-  <%= link_to 'Favorite',favorite_place_path(@place) %> 
+  <%= link_to 'unfavorite',favorite_place_path(@place) %> 
   <strong class="favorite-" id=<%="favorite-#{@place.id}" %>><%= @place.favorite%></strong>
 </p>
 
@@ -38,7 +52,8 @@
  
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
- 
- 
+
+<div class="options"> 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
+</div>
