@@ -1,0 +1,46 @@
+<header></header>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @place.country %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @place.city %>
+</p>
+
+<p>
+  <strong>Catogry:</strong>
+  <%= @place.catogry %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @place.name %>
+</p>
+
+<p>
+  <strong>Visit:</strong>
+  <%= @place.visit %>
+</p>
+
+<p>
+  <strong>Favorite:</strong>
+
+  <%= link_to 'unfavorite',favorite_place_path(@place) %> 
+  <strong class="favorite-" id=<%="favorite-#{@place.id}" %>><%= @place.favorite%></strong>
+</p>
+
+ 
+<h2>Comments</h2>
+<%= render @place.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<div class="options"> 
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>
+</div>

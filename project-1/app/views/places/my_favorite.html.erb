@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Favorites</h1>
+
+<div class="grid-container">
+  <% @places.each do |place| %>
+    
+    <div class="grid-item">
+    <%= image_tag ("Tom.jpg") %><br />
+    Country:
+      <%= place.country %> <br/>
+      City:
+      <%= place.city %> <br />
+      Catogry:
+      <%= place.catogry %> <br />
+      Name:
+      <%= place.name %> <br />
+      Visit:
+      <%= place.visit %> <br />
+      Favorite:
+      <%= place.favorite %> <br />
+  
+      
+      </div>
+  <% end %>
+  </div>
+
+
+
+<%= link_to 'Back', places_path %>

@@ -1,0 +1,58 @@
+// Place all the styles related to the Places controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+    padding: 0;
+}
+.field{
+    margin: 10px;
+}
+label{
+    width: 100px;
+}
+
+.options{
+    margin-left: 200px;
+}
+
+table{
+    margin: 100px 0 0 0;
+}
+
+ .logout{
+     margin-left: 80%;
+ }
+ .newplace{
+     margin-bottom:100px;
+ }
+
+ img {
+    //  width: 200px;
+    //  height: 200px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+
+ }
+
+ .grid-container {
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns: auto auto auto;
+    // background-color: #2196F3;
+    padding: 10px;
+    
+  }
+
+  .grid-item {
+    // background-color: rgba(177, 174, 174, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    width: 350px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    margin-right: 0%;
+  }
