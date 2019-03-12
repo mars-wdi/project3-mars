@@ -1,3 +1,4 @@
+<header></header>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -38,7 +39,8 @@
  
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
- 
- 
+
+<div class="options"> 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
+</div>

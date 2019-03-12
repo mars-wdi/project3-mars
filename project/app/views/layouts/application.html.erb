@@ -6,15 +6,41 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+
+    <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+
+<!-- for header -->
+ <nav class="navbar navbar-dark bg-primary">
+  <!-- Navbar content -->
+
+   <a class="navbar-brand">Places</a>
+  <form class="form-inline">
+  <!-- login / logout -->
+  <div class="log">
   <% if user_signed_in? %>
+      <div class="logout">
        <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+      </div>
        <% else %>
+      <div class="login">
        <%= link_to "login", new_user_session_path %>
-       <% end %>
+      </div>
+       <% end %> 
+       </div>
+       
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+
+  <div class="container">
+  <body>
+
     <%= yield %>
     <%= javascript_include_tag 'application' %>
   </body>
+  </div>
 </html>
