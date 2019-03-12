@@ -31,11 +31,12 @@ class PlacesController < ApplicationController
 def my_favorite
   @places=current_user.places
 end
-  def favorite
+def favorite
  
-    User.find(current_user.id).places << Place.find(params[:id])
-      flash[:notice] = 'Event was saved.'
+    # User.find(current_user.id).places << Place.find(params[:id])
+    #   flash[:notice] = 'Event was saved.'
     
+    current_user.favorites.create({ place_id: params[:id]})
 #@favorite=Favorite.new(user_id: 'dddd', place_id: 'tttt')
 #@favorite.save
 
@@ -48,9 +49,17 @@ end
   
   #   @rec.save
   #  @place.update(place_params)
-    redirect_to "/places/#{params[:p]}"
+    redirect_to show_place_path(params[:id])
   end
+  def unfavorite 
 
+     @favorites = current_user.favorites.where({ place_id: params[:id]})[0]
+     @favorites.destroy
+    #  User.find(current_user.id).places << Place.find(params[:id])
+    # @place.destroy
+    redirect_to places_path(params[:id])
+    
+end
 
   # POST /places
   # POST /places.json

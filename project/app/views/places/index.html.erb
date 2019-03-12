@@ -3,38 +3,29 @@
 <%= link_to 'Favorite', my_favorite_place_path %>
 <h1>Places</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Country</th>
-      <th>City</th>
-      <th>Catogry</th>
-      <th>Name</th>
-      <th>Visit</th>
-      <th>Favorite</th>
-      <th>Favorite</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="grid-container">
+<% @places.each do |place| %>
+  <div class="grid-item">
+  
 
-  <tbody>
-    <% @places.each do |place| %>
-      <tr>
-        <td><%= place.country %></td>
-        <td><%= place.city %></td>
-        <td><%= place.catogry %></td>
-        <td><%= place.name %></td>
-        <td><%= place.visit %></td>
-        <td><%= place.favorite %></td>
-      <td>  <%= link_to 'Favorite',favorite_place_path(place) %> </td>
-        <td><%= link_to 'Show', show_place_path(place) %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%=image_tag (place.image) if place.image%>
+  City :
+  <%= place.city %> <br />
+  Catogry :
+  <%= place.catogry %> <br />
+  Name :
+  <%= place.name %> <br />
+
+
+  <%= link_to 'Favorite',favorite_place_path(place) %>
+  <%= link_to 'Show', show_place_path(place) %>
+  
+  </div>
+ <% end %>
+</div>
 
 <br>
 
 <%= link_to 'New Place', new_place_path %>
+
+

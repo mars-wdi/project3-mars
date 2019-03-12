@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
-<table>
-  <tbody>
+
+<h1>Favorites</h1>
+
+<div class="grid-container">
   <% @places.each do |place| %>
-    <tr>
-      <td><%= place.country %></td>
-      <td><%= place.city %></td>
-      <td><%= place.catogry %></td>
-      <td><%= place.name %></td>
-      <td><%= place.visit %></td>
-      <td><%= place.favorite %></td>
-  
+    
+    <div class="grid-item">
+   
+    Country:
+      <%= place.country %> <br/>
+      City:
+      <%= place.city %> <br />
+      Catogry:
+      <%= place.catogry %> <br />
+      Name:
+      <%= place.name %> <br />
+     
       
-    </tr>
+      </div>
   <% end %>
-</tbody>
-</table>
+  </div>
+
+
 
 <%= link_to 'Back', places_path %>
+
+

@@ -39,11 +39,25 @@
 
 
 
-nav > a {
+ a {
     margin-left: 80px;
+    color:black;
     
 }
 
 .log {
     margin-right: 60px;
+}
+
+.parallax{
+    margin-left: -8%;
+    margin-right: -8%; 
+}
+
+.bg-primary {
+    background-color: #bba049 !important;
+}
+
+body{
+    background-color: black;
 }
