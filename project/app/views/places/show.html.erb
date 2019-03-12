@@ -27,7 +27,9 @@
 
 <p>
   <strong>Favorite:</strong>
-  <%= @place.favorite %>
+
+  <%= link_to 'Favorite',favorite_place_path(@place) %> 
+  <strong class="favorite-" id=<%="favorite-#{@place.id}" %>><%= @place.favorite%></strong>
 </p>
 
  

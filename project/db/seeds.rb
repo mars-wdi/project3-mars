@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Place.create([{country:'Saudi Arabia',city:'Riyadh',catogry:'Food',name:'Rawan'},
+{country:'Saudi Arabia',city:'Riyadh',catogry:'Food',name:'Saja'},
+{country:'Saudi Arabia',city:'Riyadh',catogry:'Food',name:'Abdulrahman'},
+{country:'Saudi Arabia',city:'Riyadh',catogry:'Food',name:'Anfal'},
+{country:'Saudi Arabia',city:'Riyadh',catogry:'Food',name:'Mohammed'}])

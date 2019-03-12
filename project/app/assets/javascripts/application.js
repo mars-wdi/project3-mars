@@ -13,3 +13,34 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+const handelRequest = e => {
+
+    const favoriteId = e.target.parentElement.id;
+    let fav = document.querySelector(`#favorite-${placeId}`).innerHTML;
+    if (fav == true) {
+        fav = false
+    }
+    else {
+        fav = true
+    }
+
+    const url = `/places/${placeId}/favorite`;
+
+    fetch(url, {
+        method: "PUT",
+        body: JSON.stringify({ place: { favorite: fav } }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(
+        res => (document.querySelector(`#favorite-${placeId}`).innerHTML = fav)
+    )
+        .catch(error => console.error("Error:", error));
+};
+
+const favorites = document.querySelectorAll(".favorite");
+
+favorites.forEach(favorite => {
+    console.log('test');
+    favorite.addEventListener("click", handelRequest);
+});

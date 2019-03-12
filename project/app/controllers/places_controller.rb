@@ -7,12 +7,12 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-      if current_user
-        @places=current_user.places
-      else
+      # if current_user
+      #  # @places=current_user.places
+      # else
         @places = Place.all
       end
-      end
+      #end
 
   # GET /places/1
   # GET /places/1.json
@@ -26,13 +26,36 @@ class PlacesController < ApplicationController
 
   # GET /places/1/edit
   def edit
+
   end
+def my_favorite
+  @places=current_user.places
+end
+  def favorite
+ 
+    User.find(current_user.id).places << Place.find(params[:id])
+      flash[:notice] = 'Event was saved.'
+    
+#@favorite=Favorite.new(user_id: 'dddd', place_id: 'tttt')
+#@favorite.save
+
+  #  @rec=Place.find(params[:id])
+  #   if @rec.favorite == true 
+  #     @rec.favorite=false
+  #     else
+  #       @rec.favorite=true
+  #   end
+  
+  #   @rec.save
+  #  @place.update(place_params)
+    redirect_to "/places/#{params[:p]}"
+  end
+
 
   # POST /places
   # POST /places.json
   def create
     @place = Place.new(place_params)
-    @place.user_id=current_user.id
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: 'Place was successfully created.' }
@@ -78,4 +101,7 @@ class PlacesController < ApplicationController
     def place_params
       params.require(:place).permit(:country, :city, :catogry, :name, :visit, :favorite)
     end
+
+
+   
 end
