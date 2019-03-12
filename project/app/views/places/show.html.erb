@@ -29,7 +29,7 @@
 <p>
   <strong>Favorite:</strong>
 
-  <%= link_to 'Favorite',favorite_place_path(@place) %> 
+  <%= link_to 'unfavorite',favorite_place_path(@place) %> 
   <strong class="favorite-" id=<%="favorite-#{@place.id}" %>><%= @place.favorite%></strong>
 </p>
 
