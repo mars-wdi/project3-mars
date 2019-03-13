@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+  </head>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+<body class="<%= controller.controller_name %>">
+<!-- for header -->
+ <nav class="navbar navbar-dark bg-primary">
+  <!-- Navbar content -->
+
+
+   <img src =  "https://raw.githubusercontent.com/mars-wdi/project3-mars/master/image%20(1).png" class="logo"/>
+   <%= link_to 'Favorite', my_favorite_place_path %>
+  <form class="form-inline">
+  <!-- login / logout -->
+  <div class="log">
+  <% if user_signed_in? %>
+      <div class="logout">
+       <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+      </div>
+       <% else %>
+      <div class="login">
+       <%= link_to "login", new_user_session_path %>
+      </div>
+       <% end %> 
+       </div>
+       
+
+  </form>
+</nav>
+
+
+  <div class="container">
+  <%= javascript_include_tag 'application' %>
+
+  
+
+    <%= yield %>
+    
+  </body>
+  </div>
+</html>

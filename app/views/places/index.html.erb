@@ -1,0 +1,55 @@
+<header></header>
+<style class="pic">
+.parallax { 
+  background-image: url("https://i.ibb.co/Tvf4VMK/img1111.jpg");
+  height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+</style>
+<div  class= "parallax"  >
+
+
+</div>
+<p id="notice"><%= notice %></p>
+
+
+
+
+<div class="grid-container">
+<% @places.each do |place| %>
+  <div class="grid-item">
+  <%= link_to herf= show_place_path(place)  do %>
+<div class="item">
+<img src =<%=(place.image) if place.image%> class="img1"/>
+</div>
+ 
+  <%= place.name %> <br />
+  <% if user_signed_in? %>
+  <center>
+ <% fav = current_user.favorites.where({place_id: place.id})[0]%>
+       <% if fav %>
+       <%= link_to '✭',unfavorite_place_path(place) ,method: :delete %> 
+       <% else %>
+       <%= link_to '✩',favorite_place_path(place),method: :patch %>
+ 
+       <% end %>
+       <% end %>
+
+</center>
+
+  <% end %>
+
+ 
+ 
+  
+  </div>
+ <% end %>
+</div>
+
+<br>
+
+

@@ -1,0 +1,61 @@
+# <header></header>
+# <%= form_with(model: place, local: true) do |form| %>
+#   <% if place.errors.any? %>
+#     <div id="error_explanation">
+#       <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+#       <ul>
+#       <% place.errors.full_messages.each do |message| %>
+#         <li><%= message %></li>
+#       <% end %>
+#       </ul>
+#     </div>
+#   <% end %>
+
+#   <div class="field">
+#     <%= form.label :country %>
+#     <%= form.text_field :country %>
+#   </div>
+
+#   <div class="field">
+#     <%= form.label :city %>
+#     <%= form.text_field :city %> 
+#   </div>
+
+#   <div class="field">
+#     <%= form.label :catogry %>
+#     <%= form.text_field :catogry %>
+#   </div>
+
+#   <div class="field">
+#     <%= form.label :name %>
+#     <%= form.text_field :name %>
+#   </div>
+
+#   # <div class="field">
+#   #   <%= form.label :visit %>
+#   #   <%= form.check_box :visit %>
+#   # </div>
+
+#   # <div class="field">
+#   #   <%= form.label :favorite %>
+#   #   <%= form.check_box :favorite %>
+#   # </div>
+  
+
+#   <div class="actions">
+#     <%= form.submit %>
+#   </div>
+
+# #   <div class="pretty p-icon p-toggle p-plain">
+# #   <input type="checkbox" />
+# #   <div class="state p-off">
+# #   <i class="icon fa fa-heart-o "></i>
+# #   <label></label>
+# #   </div>
+# #   <div class="state p-on p-info-o">
+# #   <i class="icon fa fa-heart"></i>
+# #   <label></label>
+# #   </div>
+# # </div>
+# <% end %>
