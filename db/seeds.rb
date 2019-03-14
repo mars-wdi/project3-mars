@@ -23,6 +23,6 @@ csv.each do |row|
   t.catogry = row['Catogry']
   t.image = row['Image']
   t.latitude = row['Latitude']
-  t.longitude = row['longitude']
+  t.longitude = row['Longitude']
   t.save!
 end
