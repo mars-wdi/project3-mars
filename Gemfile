@@ -32,6 +32,7 @@ gem 'devise', '~> 4.6', '>= 4.6.1'
 gem "font-awesome-rails"
 
 # Use Capistrano for deployment
+
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb

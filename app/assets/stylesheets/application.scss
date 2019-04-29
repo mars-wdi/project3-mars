@@ -61,7 +61,7 @@
 
 
 .logo{
-    width: 180px;
+    width: 200px;
     margin-left: 50px;
 }
 .item {
@@ -93,11 +93,8 @@
     padding: 5px;
 }
 
-.parallax{
-    margin-left: -15%;
-  
-   
-
+html , body{
+  width: 100% !important; 
 }
 .grid2{
     width: 100pw;
@@ -122,7 +119,7 @@
     z-index: 9999;
         overflow: hidden;
         background-color: #333;
-        position: fixed;
+      //  position: fixed;
         top: 0;
         width: 100%;
       
@@ -139,6 +136,25 @@ body {
   font: normal 14px Roboto,arial,sans-serif;
  
 }
+
+.nav-item{
+    margin: auto;
+    color:black !important;
+
+}
+.nav-item a{
+    color:black !important; 
+}
+
+
+    // .parallax { 
+    //   background-image: url("https://i.ibb.co/Tvf4VMK/img1111.jpg");
+    //   height: 500px; 
+    //   background-attachment: fixed;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   left: 0;
+    // }
 
 
 .sessions .container {
@@ -167,9 +183,12 @@ body {
     box-shadow:0 1px 0 #cfcfcf;
     width: 500px;
 }
+.nav-bar{
+     background-color: #bba049 ;
+}
 
 h3 { 
- border:0 solid #fff; 
+
  border-bottom-width:1px;
  padding-bottom:10px;
  text-align: center;
@@ -195,3 +214,7 @@ h3 {
     text-align: center;
    
 }
+
+
+
+

@@ -4,45 +4,69 @@
     <title>Project</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-
-  </head>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-<body class="<%= controller.controller_name %>">
-<!-- for header -->
- <nav class="navbar navbar-dark bg-primary">
+  </head>
+  <body class="<%= controller.controller_name %>">
+
+  <style>
+    # [class^="col-"]{
+    #   border: 2px solid red ;
+    # }
+    .parallax { 
+  /* The image used */
+  background-image: url("https://i.ibb.co/Tvf4VMK/img1111.jpg");
+
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  </style>
+
+  <!-- for header -->
+
+  <div>
   <!-- Navbar content -->
 
-<%= link_to href =places_path do %>
-   <img src = "https://i.imgur.com/LpnO2zc.png" class="logo"/>
-   <% end %>
-   <%= link_to 'Favorite', my_favorite_place_path %>
-  <form class="form-inline">
-  <!-- login / logout -->
-  <div class="log">
-  <% if user_signed_in? %>
-      <div class="logout">
-       <%= link_to 'logout', destroy_user_session_path, method: :delete, :class => "logout" %>
-      </div>
+<div class="row nav-bar" style="padding-left: 0">
+   <div class="col-lg-4 col-md-4 text-center" align="center">
+    <%= link_to href =places_path do %>
+      <img  src = "https://i.imgur.com/LpnO2zc.png"/>
+    <% end %>
+  </div>
+    <div  class="col-lg-4 col-md-4 nav-item text-center" align="center">
+ <h3>  <%= link_to 'Favorite', my_favorite_place_path %></h3>
+  </div>
+
+    <div class="col-lg-4 col-md-4 nav-item text-center" align="center">
+      <form class="form-inline center-block d-flex align-items-center justify-content-center" style="display: flex !important">
+      <!-- login / logout -->
+        <% if user_signed_in? %>
+       <h3>   <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+     </h3>
        <% else %>
-      <div class="login">
-       <%= link_to "login", new_user_session_path ,:class => "login"%>
-      </div>
-       <% end %> 
-       </div>
-       
+       <h3>
+        <%= link_to "login", new_user_session_path%>
+  </h3>
+        <% end %> 
+      </form>
+    </div>
+  </div>
 
-  </form>
-</nav>
-
-
-  <div class="container">
-  <%= javascript_include_tag 'application' %>
-
-  
-
-    <%= yield %>
-    
+    <!-- Container element -->
+    <% if  request.path.split("/").last != "sign_in" &&  request.path.split("/").last !=  "sign_up" %>
+     
+    <% end %>
+     <div class="parallax"> </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag 'application' %>
   </body>
   </div>
 </html>
