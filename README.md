@@ -16,7 +16,7 @@
 
 ### The place details page 
 
-![alt text](https://e.top4top.net/p_1192g0ejo1.png)
+![alt text](https://d.top4top.net/p_122223kl41.jpg)
 
 ## Amaken link 
 
