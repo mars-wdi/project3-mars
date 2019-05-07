@@ -2,7 +2,9 @@
 
  # Amaken  📍
  
-![screenshot](./public/Mytodo2.png)
+## ScreenShot of Home Page
+
+![alt text](https://ibb.co/VY3d7jS)
 
 
 ## `Technology:` 💻
