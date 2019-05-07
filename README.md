@@ -2,9 +2,25 @@
 
  # Amaken  📍
  
+ Amaken is an application that allows users to know the tourist and vital places in the region by displaying information about the place, pictures of it, and the location of the place using GPS. The user can also add the any places he/she wants to his/her favorite list for future reference when needed.
+ 
 ## ScreenShot of Home Page
 
 ![alt text](https://e.top4top.net/p_1222wp5901.jpg)
+
+## Demo for the website
+
+### Login page
+
+![alt text](https://f.top4top.net/p_1222kjhjw1.jpg)
+
+### The place details page 
+
+![alt text](https://e.top4top.net/p_1192g0ejo1.png)
+
+## Amaken link 
+
+[Application link](https://vast-springs-81518.herokuapp.com/)
 
 
 ## `Technology:` 💻
